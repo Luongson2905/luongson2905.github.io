@@ -21,7 +21,7 @@ body {
     border: 15px solid #dde;
     position: relative;
     overflow: hidden;
-    transition: 1s;
+    transition: 10s;
 }
 
 .wapper div {
