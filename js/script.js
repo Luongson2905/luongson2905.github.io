@@ -1,8 +1,8 @@
 const container = document.querySelector(".wapper");
 const btn = document.getElementById("spin");
 const result = document.querySelector(".result");
-const gifts = ["one", "two", "three", "four", "five", "six", "seven", "TV"];
-const correct = [1, 2, 3];
+const gifts = ["one", "two", "three", "four", "five", "six", "Ấm điện", "TV"];
+const correct = [1, 2, 3, 4, 5, 6];
 const SEGMENT = 45;
 let pause = false;
 let rotate = 0;
@@ -37,7 +37,7 @@ btn.onclick = function () {
         console.log(number, rotate, ((rotate / SEGMENT) % 8) + 1);
         setTimeout(() => {
             pause = false;
-        }, 1500);
+        }, 10500);
         pause = true;
     }
 };
