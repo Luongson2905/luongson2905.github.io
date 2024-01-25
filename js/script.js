@@ -1,7 +1,7 @@
 const container = document.querySelector(".wapper");
 const btn = document.getElementById("spin");
 const result = document.querySelector(".result");
-const gifts = ["one", "two", "three", "four", "five", "Đèn", "Ấm điện", "TV"];
+const gifts = ["one", "two", "three", "four", "ABC", "Đèn", "Ấm điện", "TV"];
 const correct = [1, 2, 3, 4, 5, 6];
 const SEGMENT = 45;
 let pause = false;
