@@ -9,7 +9,7 @@ const gifts = [
     "Chúc bạn may mắn lần sau",
     "Nồi cơm điện",
     "Ấm siêu tốc",
-    "GĐB:TIVI SONY 43 INCH",
+    "GĐB:TIVI SAMSUNG 43 INCH",
 ];
 const correct = [1, 3, 5, 6, 7];
 const SEGMENT = 45;
