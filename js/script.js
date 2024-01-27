@@ -11,7 +11,7 @@ const gifts = [
     "Ấm siêu tốc",
     "GĐB:TIVI SAMSUNG 43 INCH",
 ];
-const correct = [1, 3, 5, 6, 7];
+const correct = [1, 3, 5];
 const SEGMENT = 45;
 let pause = false;
 let rotate = 0;
