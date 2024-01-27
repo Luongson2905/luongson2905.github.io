@@ -2,7 +2,7 @@ const container = document.querySelector(".wapper");
 const btn = document.getElementById("spin");
 const result = document.querySelector(".result");
 const gifts = [
-    "Chúc bạn may mắn lần sau",
+    "Chúc bạn may mắn lần sau 1",
     "Nồi cơm điện",
     "Ấm siêu tốc",
     "Nồi chiên không dầu",
@@ -46,7 +46,7 @@ btn.onclick = function () {
         console.log(number, rotate, ((rotate / SEGMENT) % 8) + 1);
         setTimeout(() => {
             pause = false;
-        }, 10500);
+        }, 1500);
         pause = true;
     }
 };
