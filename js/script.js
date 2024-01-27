@@ -11,7 +11,7 @@ const gifts = [
     "Ấm siêu tốc",
     "GĐB:TIVI SAMSUNG 43 INCH",
 ];
-const correct = [1, 3, 5];
+const correct = [1, 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, 3, 5];
 const SEGMENT = 45;
 let pause = false;
 let rotate = 0;
@@ -52,11 +52,6 @@ btn.onclick = function () {
 };
 
 function getRandomNumber() {
-    let number;
-    let index;
-    do {
-        number = Math.ceil(Math.random() * 8);
-        index = (((rotate + number * SEGMENT) / SEGMENT) % 8) + 1;
-    } while (!correct.includes(index));
-    return number;
+    let number = Math.ceil(Math.random() * 8);
+                           return correct[number%correct.length];
 }
