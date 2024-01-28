@@ -41,8 +41,8 @@ function getRandomColor() {
 btn.onclick = function () {
     if (!pause) {
         let number = getRandomNumber();
-        alert(number);
-        rotate += number * SEGMENT + 3600;
+        let rol = (number - 1) * SEGMENT + 3600;
+        rotate += rol;
         container.style.transform = "rotate(-" + rotate + "deg)";
         console.log(number, rotate, ((rotate / SEGMENT) % 8) + 1);
         setTimeout(() => {
