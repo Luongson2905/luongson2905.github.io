@@ -53,6 +53,6 @@ btn.onclick = function () {
 };
 
 function getRandomNumber() {
-    let number = Math.ceil(Math.random() * 8);
+    let number = Math.ceil(Math.random() * correct.length - 1);
                            return correct[number%correct.length];
 }
