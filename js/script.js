@@ -1,6 +1,5 @@
-const container = document.querySelector(".wapper");
-const btn = document.getElementById("spin");
-const result = document.querySelector(".result");
+const transition = 5;
+const correct = [1, 3, 5];
 const gifts = [
     "Chúc bạn may mắn lần sau 1",
     "Nồi cơm điện",
@@ -11,10 +10,13 @@ const gifts = [
     "Ấm siêu tốc",
     "GĐB:TIVI SAMSUNG 43 INCH",
 ];
-const correct = [1, 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, 3, 5];
+const container = document.querySelector(".wapper");
+const btn = document.getElementById("spin");
+const result = document.querySelector(".result");
 const SEGMENT = 45;
 let pause = false;
 let rotate = 0;
+let current = 1;
 
 document.addEventListener("DOMContentLoaded", start());
 
@@ -26,6 +28,7 @@ function start() {
         div.style.transform = "rotate(" + SEGMENT * index + "deg)";
         container.appendChild(div);
     });
+    container.style.transition = transition + "s";
     console.log(gifts[(rotate / SEGMENT) % 8]);
 }
 
@@ -41,18 +44,21 @@ function getRandomColor() {
 btn.onclick = function () {
     if (!pause) {
         let number = getRandomNumber();
-        let rol = (number - 1) * SEGMENT + 3600;
+        let diff = number - current;
+        let rol;
+        if (diff < 0) rol = (gifts.length + rol) * SEGMENT + 3600;
+        else rol = diff * SEGMENT + 3600;
         rotate += rol;
         container.style.transform = "rotate(-" + rotate + "deg)";
-        console.log(number, rotate, ((rotate / SEGMENT) % 8) + 1);
+        console.log(number, (number - 1) * SEGMENT, ((rotate / SEGMENT) % 8) + 1);
         setTimeout(() => {
             pause = false;
-        }, 1500);
+        }, transition + 500);
         pause = true;
     }
 };
 
 function getRandomNumber() {
     let number = Math.ceil(Math.random() * correct.length - 1);
-                           return correct[number%correct.length];
+    return correct[number % correct.length];
 }

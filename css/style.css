@@ -23,7 +23,6 @@ body {
     border: 1.5vmin solid #dde;
     position: relative;
     overflow: hidden;
-    transition: 1s;
 }
 
 .wapper div {
