@@ -1,5 +1,5 @@
 const transition = 5;
-const correct = [1, 3, 5];
+const correct = [1,1,1,1, 3, 5,5,5];
 const gifts = [
     "Chúc bạn may mắn lần sau 1",
     "Nồi cơm điện",
